@@ -1,10 +1,17 @@
 import './App.css';
 import { useState } from 'react';
+import Axios from "axios";
 
 const App = () => {
 
     const [pokemonName, setPokemonName] = useState("");
 
+
+    const searchPokemon = () => {
+        Axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`).then((response) => {
+        console.log(response);
+    })
+    }
 
     return (
         <div className="App">
@@ -15,7 +22,7 @@ const App = () => {
             onChange={(event) => {
                 setPokemonName(event.target.value);
             }}/>
-            <button>Seach Pokemon</button>
+            <button onClick={searchPokemon}>Seach Pokemon</button>
             </div>
         </div>
     )
