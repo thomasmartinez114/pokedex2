@@ -4,7 +4,16 @@ import Axios from 'axios';
 
 const App = () => {
   const [pokemonName, setPokemonName] = useState('');
-  const [pokemon, setPokemon] = useState({});
+  const [pokemonChosen, setPokemonChosen] = useState(false);
+  const [pokemon, setPokemon] = useState({
+    name: '',
+    species: '',
+    img: '',
+    hp: '',
+    attack: '',
+    defense: '',
+    type: '',
+  });
 
   const searchPokemon = () => {
     Axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`).then(
@@ -19,6 +28,7 @@ const App = () => {
           defense: response.data.stats[2].base_stat,
           type: response.data.types[0].type.name,
         });
+        setPokemonChosen(true);
       }
     );
   };
@@ -34,6 +44,14 @@ const App = () => {
           }}
         />
         <button onClick={searchPokemon}>Search Pokemon</button>
+      </div>
+
+      <div className='DisplaySection'>
+        {!pokemonChosen ? (
+          <h1>Please Choose a Pokemon</h1>
+        ) : (
+          <h1>{pokemonName}</h1>
+        )}
       </div>
     </div>
   );

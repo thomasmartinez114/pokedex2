@@ -1,49 +1,46 @@
 body {
-    margin: 0%;
-    padding: 0%;
+  margin: 0%;
+  padding: 0%;
 }
 .App {
-    display: flex;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
-
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  flex-direction: column;
 }
 
-
 .TitleSection {
-    background-color: #5D89FF;
-    width: 100%;
-    height: 300px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-
+  background-color: #5d89ff;
+  width: 100%;
+  height: 300px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .TitleSection input {
-    width: 200px;
-    height: 40px;
-    border-radius: 10px;
-    border: 1px solid #3b6cf5;
-    font-size: 18px;
-    padding-left: 10px;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #3b6cf5;
+  font-size: 18px;
+  padding-left: 10px;
 }
 
 .TitleSection button {
-    width: 150px;
-    height: 60px;
-    margin: 20px;
-    border-radius: 10px;
-    font-size: 18px;
-    padding-left: 10px;
-    border: none;
-    color: white;
-    background-color: #4f6bb9;
+  width: 150px;
+  height: 60px;
+  margin: 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  padding-left: 10px;
+  border: none;
+  color: white;
+  background-color: #4f6bb9;
 }
 
 .TitleSection button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
