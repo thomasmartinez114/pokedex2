@@ -64,3 +64,8 @@ h3 {
   border: 2px dashed red;
   margin-top: 20px;
 }
+
+.pokemonName {
+  text-align: center;
+  text-transform: uppercase;
+}
